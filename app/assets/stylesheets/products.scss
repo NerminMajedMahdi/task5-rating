@@ -1,0 +1,99 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/**** index.html.erb ****/
+
+.product-page-title {
+	margin-bottom: 75px;
+}
+
+.product-columns .img-responsive {
+	max-height: 100%;
+	max-width: 100%;
+	height: 250px;
+	width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+/**** _form.html.erb ****/
+
+form {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	text-display: left;
+	width: 60%;
+}
+
+.form-group input {
+	width: 100%;
+}
+
+.form-group textarea {
+	width: 50%;
+	margin-right: 10px;
+}
+
+/**** show ****/
+
+.col-xs-12 {
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+
+.product-hero-image {
+	width: 100%;
+	height: auto;
+}
+
+.product-image {
+	border: 3px solid black;
+	padding: 15px;
+}
+
+.product-title-image {
+	width: 90%;
+	float: left;
+}
+
+.add-review h3 {
+	text-align: left;
+}
+
+.rating {
+	position: relative;
+	float: left;
+}
+
+form p input {
+	margin-top: 10px;
+}
+
+/**** typography ****/
+
+.product-show-container h3 {
+	margin-top: 0;
+	font-size: 18pt;
+	font-weight: bold;
+}
+
+.product-show-container h5 {
+	font-weight: bold;
+}
+
+.product-show-container p, h5, .rated {
+	text-align: left;
+}
+
+.product-specification p {
+	font-size: 16px;
+	font-style: italic;
+}
+
+.add-review p {
+	font-size: 16px;
+}
+

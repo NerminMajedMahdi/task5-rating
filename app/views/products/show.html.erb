@@ -1,0 +1,66 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container product-show-container">
+  <div class="row prod-spec-row">
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="product-title-image">
+        <div class="product-title">
+          <h3><%= @product.name %></h3>
+        </div> <!-- end product-title -->
+        <div class="product-image">
+          <strong class="sr-only">Image url:</strong>
+          <%= image_tag @product.image_url, class: "product-hero-image" %>
+        </div> <!-- end product-image -->
+      </div> <!-- end product-title-image -->
+    </div> <!-- end col -->
+
+    <div class="col-xs-12 col-sm-6">
+      <div class="product-specification">
+        <div class="product-price">
+          <h5>Price</h5>
+          <p><%= @product.price %></p>
+        </div> <!-- end price -->
+        <div class="product-colour">
+          <h5>Colour</h5>
+          <p><%= @product.colour %></p>
+        </div> <!-- end product-colour -->
+        <div class="product-star-rating">
+          <h5>Average Rating <div class="rated" data-score="<%= @product.average_rating %>"></div></h5>
+        <div class="product-description">
+          <h5>Description</h5>
+          <p><%= @product.description %></p>
+        </div> <!-- end-product-description -->
+        <div class="stripe-form">
+          <%= form_with(url: '/payments/create') do |form| %>
+            <%= render partial: "shared/stripe_checkout_button" %>
+          <% end %>
+        </div> <!-- end stripe-form -->
+      </div><!-- end product-specification -->
+    </div> <!-- end col -->
+  </div> <!-- end row -->
+
+  <div class="row add-review">
+    <div class="col-xs-12">
+      <%= render 'new_comment' %>
+    </div> <!-- end col -->
+  </div> <!-- end row -->
+
+  <div class="row product-review-row">
+    <div class="col-xs-12">
+      <div class="product-comments">
+        <h5>Product Reviews</h5>
+        <% if @product.highest_rating_comment %>
+        <%= render 'comments' %>
+          <p><%= @product.highest_rating_comment.body %></p>
+        <% else %>
+          <p>No one has submitted a review yet, be the first!</p>
+        <% end %>
+        <%= will_paginate @comments, class: 'paginated-pages' %>
+      </div> <!-- end product-comments -->
+    </div> <!-- end col -->
+  </div> <!-- end row -->
+</div> <!-- end container -->
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

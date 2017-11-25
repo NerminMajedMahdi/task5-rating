@@ -1,0 +1,128 @@
+// Place all the styles related to the static_pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/**** page layout ****/
+
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin-top: 0;
+}
+
+.page-wrap {
+	min-height: 100%;
+	margin-bottom: -50px;
+}
+
+.page-wrap:after {
+	content: "";
+	display: block;
+}
+
+h1, h2, p {
+	text-align: center;
+}
+
+/**** navigation bar ****/
+
+.navbar {
+	max-height: 30px;
+	display: inline;
+}
+
+#bs-example-navbar-collapse-1 {
+	background-color: #f5f5f5;
+}
+
+.navbar-header .navbar-brand {
+	position: relative;
+	left: 5px;
+	bottom: 10px;
+	width: 70px;
+	max-height: 15px;
+}
+
+.bulletin p {
+	padding: 0px;
+}
+
+
+/**** index ****/
+
+.container {
+	text-align: center;
+}
+
+.billboard {
+	text-align: center;
+}
+
+.billboard:hover {
+	color: none;
+}
+
+/**** carousel ****/
+
+.carousel-image {
+	max-height: 100%;
+	max-width: 100%;
+	height: 450px;
+	width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.carousel-caption {
+	position: absolute;
+	margin-top: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 32px;
+	text-shadow: 3px 2px black;
+	font-weight: bold;
+}
+
+/**** contact form ****/
+
+
+
+/**** sticky footer ****/
+
+.site-footer, .page-wrap:after {
+	height: 50px;
+}
+
+.site-footer {
+	background: #f5f5f5;
+}
+
+.site-footer p {
+	position: relative;
+	left: 15px;
+	top: 15px;
+}
+
+/**** typography****/
+
+h1,
+h2,
+h3,
+p {
+	font-family: 'arial black, arial, tahoma, sans-serif';
+}
+
+h1 {
+	font-weight: 800;
+}
+
+p {
+	font-size: 18pt;
+}
+
